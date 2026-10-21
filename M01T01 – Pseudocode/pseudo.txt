@@ -1,0 +1,84 @@
+M01T01 - Pseudocode Assignment
+================================
+
+Algorithm 1: Largest Positive Number
+-------------------------------------
+1. Initialize variable largest_number to 0
+2. Display message "Enter positive numbers (enter 0 to stop)"
+3. WHILE true:
+    a. Prompt user to input a number
+    b. Store the input in variable current_number
+    c. IF current_number equals 0:
+        i. EXIT the loop
+    d. IF current_number is greater than largest_number:
+        i. Set largest_number to current_number
+4. Display "The largest number entered is: " + largest_number
+5. END
+
+
+Algorithm 2: Name and Greeting
+-------------------------------
+1. Display message "Please enter your name: "
+2. Read user input and store in variable first_name
+3. Display "Hello, World"
+4. Display first_name
+5. END
+
+
+Algorithm 3: Arithmetic Average
+--------------------------------
+1. Initialize variable total to 0
+2. Initialize variable count to 0
+3. Display message "Enter integers (enter -1 to finish)"
+4. WHILE true:
+    a. Prompt user to input an integer
+    b. Store the input in variable number
+    c. IF number equals -1:
+        i. EXIT the loop
+    d. Add number to total
+    e. Increment count by 1
+5. IF count is greater than 0:
+    a. Calculate average = total / count
+    b. Display "The arithmetic average is: " + average
+6. ELSE:
+    a. Display "No numbers were entered"
+7. END
+
+
+Algorithm 4: Grocery List
+--------------------------
+1. Create an empty list called grocery_list
+2. Create an empty list called items_to_buy
+3. Display message "Enter grocery items (type 'done' when finished)"
+4. WHILE true:
+    a. Prompt user to input an item
+    b. IF item equals "done":
+        i. EXIT the loop
+    c. Add item to grocery_list
+5. Display message "Enter items you've already bought (type 'done' when finished)"
+6. WHILE true:
+    a. Prompt user to input an item
+    b. IF item equals "done":
+        i. EXIT the loop
+    c. Remove item from grocery_list if it exists
+7. Sort grocery_list alphabetically
+8. Store sorted list in items_to_buy
+9. Display "Items still to buy (alphabetically):"
+10. FOR each item in items_to_buy:
+    a. Display item
+11. END
+
+
+Algorithm 5: Flowchart Interpretation (Calculate Sum, Average, and Product)
+----------------------------------------------------------------------------
+1. Display message "Enter first number (X): "
+2. Read user input and store in variable X
+3. Display message "Enter second number (Y): "
+4. Read user input and store in variable Y
+5. Calculate S = X + Y (sum)
+6. Calculate A = S / 2 (average)
+7. Calculate P = X × Y (product)
+8. Display "Sum (S): " + S
+9. Display "Average (A): " + A
+10. Display "Product (P): " + P
+11. END
