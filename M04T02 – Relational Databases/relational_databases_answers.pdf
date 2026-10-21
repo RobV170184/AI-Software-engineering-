@@ -1,0 +1,261 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<</Type /Catalog /Pages 2 0 R>>
+endobj
+
+2 0 obj
+<</Type /Pages /Kids [3 0 R 4 0 R 5 0 R 6 0 R] /Count 4>>
+endobj
+
+11 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding>>
+endobj
+
+7 0 obj
+<</Length 2626>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 790 Tm
+13 TL
+(Relational Databases - Task Answers) Tj T*
+(=====================================) Tj T*
+() Tj T*
+(1. What is normalisation?) Tj T*
+(=========================) Tj T*
+(Normalisation is the process of restructuring database tables to reduce data) Tj T*
+(redundancy and eliminate data anomalies. The goal is to bring the database to) Tj T*
+(a consistent state where each table represents a single subject, no data is) Tj T*
+(unnecessarily duplicated across tables, and all attributes in a table are) Tj T*
+(functionally dependent on the primary key. Normalisation works through a series) Tj T*
+(of stages called normal forms \(1NF, 2NF, 3NF\), with each stage being) Tj T*
+(structurally better than the previous one.) Tj T*
+() Tj T*
+() Tj T*
+(2. When is a table in 1NF \(First Normal Form\)?) Tj T*
+(===============================================) Tj T*
+(A table is in First Normal Form \(1NF\) when:) Tj T*
+(- All of the key attributes are defined \(a primary key exists\),) Tj T*
+(- There are no repeating groups in the table \(each cell contains a single) Tj T*
+(  value, not a list of values\), and) Tj T*
+(- All attributes are dependent on the primary key.) Tj T*
+() Tj T*
+(In other words, data must be presented in a tabular format where each cell) Tj T*
+(contains exactly one value.) Tj T*
+() Tj T*
+() Tj T*
+(3. When is a table in 2NF \(Second Normal Form\)?) Tj T*
+(================================================) Tj T*
+(A table is in Second Normal Form \(2NF\) when:) Tj T*
+(- It is already in 1NF, and) Tj T*
+(- It includes no partial dependencies -- that is, no non-key attribute is) Tj T*
+(  dependent on only a portion of the primary key.) Tj T*
+() Tj T*
+(2NF is only relevant when a table has a composite primary key \(a key made up) Tj T*
+(of two or more columns\). If the primary key is a single column, a table in) Tj T*
+(1NF is automatically in 2NF.) Tj T*
+() Tj T*
+() Tj T*
+(4. When is a table in 3NF \(Third Normal Form\)?) Tj T*
+(===============================================) Tj T*
+(A table is in Third Normal Form \(3NF\) when:) Tj T*
+(- It is already in 2NF, and) Tj T*
+(- It contains no transitive dependencies -- that is, no non-key attribute is) Tj T*
+(  dependent on another non-key attribute.) Tj T*
+() Tj T*
+(In 3NF, every non-key attribute must depend directly and only on the primary) Tj T*
+(key, not on any other non-key column.) Tj T*
+() Tj T*
+() Tj T*
+(=============================================================) Tj T*
+(INVOICE TABLE ANALYSIS \(Questions 5, 6, and 7\)) Tj T*
+(=============================================================) Tj T*
+ET
+endstream
+endobj
+
+3 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Contents 7 0 R /Resources <</Font <</F1 11 0 R>>>>>>
+endobj
+
+8 0 obj
+<</Length 2786>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 790 Tm
+13 TL
+() Tj T*
+(The INVOICE table \(provided\):) Tj T*
+(+----------+----------+-----------+------------+-----------+-----------+----------+----------+) Tj T*
+(| INV_NUM  | PROD_NUM | SALE_DATE | PROD_LABEL | VEND_CODE | VEND_NAME |QUANT_SOLD|PROD_PRICE|) Tj T*
+(+----------+----------+-----------+------------+-----------+-----------+----------+----------+) Tj T*
+(| 211347   |AA-E3522QW|15-Jan-2018| Rot. sander|    211    |NeverFail  |     1    |  $34.46  |) Tj T*
+(| 211347   |QD-300932X|15-Jan-2018| Drill bit  |    211    |NeverFail  |     8    |   $2.73  |) Tj T*
+(| 211347   |RU-995748G|15-Jan-2018| Band saw   |    309    |BeGood     |     1    |  $31.59  |) Tj T*
+(| 211348   |AA-E3522QW|15-Jan-2018| Rot. sander|    211    |NeverFail  |     2    |  $34.46  |) Tj T*
+(| 211349   |GH-778345P|16-Jan-2018| Power drill|    157    |ToughGo    |     1    |  $69.32  |) Tj T*
+(+----------+----------+-----------+------------+-----------+-----------+----------+----------+) Tj T*
+() Tj T*
+(Composite Primary Key: INV_NUM + PROD_NUM) Tj T*
+() Tj T*
+() Tj T*
+(--------------------------------------------------------------) Tj T*
+(5. Dependency Diagram and All Dependencies \(1NF Analysis\)) Tj T*
+(--------------------------------------------------------------) Tj T*
+() Tj T*
+(The table has no repeating groups and already contains single values per cell,) Tj T*
+(so it is already in 1NF. The composite primary key is INV_NUM + PROD_NUM.) Tj T*
+() Tj T*
+(Identified Dependencies:) Tj T*
+() Tj T*
+(  FULL dependency \(on the full composite key\):) Tj T*
+(    INV_NUM, PROD_NUM -> QUANT_SOLD) Tj T*
+(    \(You need BOTH the invoice number AND product number to know the) Tj T*
+(     quantity sold on that specific invoice line.\)) Tj T*
+() Tj T*
+(  PARTIAL dependencies \(on only part of the composite key\):) Tj T*
+(    INV_NUM -> SALE_DATE) Tj T*
+(    \(The sale date belongs to the invoice, not the product.\)) Tj T*
+() Tj T*
+(    PROD_NUM -> PROD_LABEL) Tj T*
+(    \(The product label describes the product, not the invoice.\)) Tj T*
+() Tj T*
+(    PROD_NUM -> VEND_CODE) Tj T*
+(    \(The vendor code is a property of the product.\)) Tj T*
+() Tj T*
+(    PROD_NUM -> PROD_PRICE) Tj T*
+(    \(The product price belongs to the product, not the invoice.\)) Tj T*
+() Tj T*
+(  TRANSITIVE dependency \(non-key attribute depends on another non-key attribute\):) Tj T*
+(    VEND_CODE -> VEND_NAME) Tj T*
+(    \(The vendor name is determined by the vendor code, not directly) Tj T*
+(     by the primary key -- this is a transitive dependency.\)) Tj T*
+() Tj T*
+(  Full dependency path \(through partial\):) Tj T*
+(    PROD_NUM -> VEND_CODE -> VEND_NAME) Tj T*
+() Tj T*
+(See file: Q5_dependency_diagram.drawio for the visual dependency diagram.) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+
+4 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Contents 8 0 R /Resources <</Font <</F1 11 0 R>>>>>>
+endobj
+
+9 0 obj
+<</Length 2477>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 790 Tm
+13 TL
+() Tj T*
+(--------------------------------------------------------------) Tj T*
+(6. Remove Partial Dependencies -- Conversion to 2NF) Tj T*
+(--------------------------------------------------------------) Tj T*
+() Tj T*
+(To convert to 2NF, we remove all partial dependencies by splitting the table.) Tj T*
+(Each part of the composite primary key becomes the primary key of a new table,) Tj T*
+(and attributes that depend only on that part move into that table. Attributes) Tj T*
+(that depend on the full composite key stay in a linking table.) Tj T*
+() Tj T*
+(Resulting 2NF tables:) Tj T*
+() Tj T*
+(  INVOICE \(INV_NUM [PK], SALE_DATE\)) Tj T*
+(    -- INV_NUM determines SALE_DATE \(partial dep resolved\)) Tj T*
+() Tj T*
+(  PRODUCT \(PROD_NUM [PK], PROD_LABEL, VEND_CODE, VEND_NAME, PROD_PRICE\)) Tj T*
+(    -- PROD_NUM determines all these attributes \(partial deps resolved\)) Tj T*
+(    -- Note: VEND_CODE -> VEND_NAME transitive dependency still exists here) Tj T*
+() Tj T*
+(  INVOICE_PRODUCT \(INV_NUM [PK/FK], PROD_NUM [PK/FK], QUANT_SOLD\)) Tj T*
+(    -- Full composite key determines QUANT_SOLD) Tj T*
+() Tj T*
+(Relational schemas:) Tj T*
+(  INVOICE \(INV_NUM, SALE_DATE\)) Tj T*
+(  PRODUCT \(PROD_NUM, PROD_LABEL, VEND_CODE, VEND_NAME, PROD_PRICE\)) Tj T*
+(  INVOICE_PRODUCT \(INV_NUM, PROD_NUM, QUANT_SOLD\)) Tj T*
+() Tj T*
+(See file: Q6_2NF_diagrams.drawio for the visual dependency diagrams.) Tj T*
+() Tj T*
+() Tj T*
+(--------------------------------------------------------------) Tj T*
+(7. Remove Transitive Dependencies -- Conversion to 3NF) Tj T*
+(--------------------------------------------------------------) Tj T*
+() Tj T*
+(The PRODUCT table from 2NF still has a transitive dependency:) Tj T*
+(  PROD_NUM -> VEND_CODE -> VEND_NAME) Tj T*
+() Tj T*
+(To convert to 3NF, we remove the transitive dependency by extracting VEND_CODE) Tj T*
+(and VEND_NAME into their own table. VEND_CODE stays in PRODUCT as a foreign key) Tj T*
+(to link to the new VENDOR table.) Tj T*
+() Tj T*
+(Resulting 3NF tables:) Tj T*
+() Tj T*
+(  INVOICE \(INV_NUM [PK], SALE_DATE\)) Tj T*
+() Tj T*
+(  PRODUCT \(PROD_NUM [PK], PROD_LABEL, VEND_CODE [FK], PROD_PRICE\)) Tj T*
+(    -- CHG_HOUR removed; VEND_CODE stays as foreign key to VENDOR) Tj T*
+() Tj T*
+(  VENDOR \(VEND_CODE [PK], VEND_NAME\)) Tj T*
+(    -- New table created from transitive dependency) Tj T*
+() Tj T*
+(  INVOICE_PRODUCT \(INV_NUM [PK/FK], PROD_NUM [PK/FK], QUANT_SOLD\)) Tj T*
+ET
+endstream
+endobj
+
+5 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Contents 9 0 R /Resources <</Font <</F1 11 0 R>>>>>>
+endobj
+
+10 0 obj
+<</Length 544>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 790 Tm
+13 TL
+() Tj T*
+(Final relational schemas \(3NF\):) Tj T*
+(  INVOICE \(INV_NUM, SALE_DATE\)) Tj T*
+(  PRODUCT \(PROD_NUM, PROD_LABEL, VEND_CODE, PROD_PRICE\)) Tj T*
+(  VENDOR \(VEND_CODE, VEND_NAME\)) Tj T*
+(  INVOICE_PRODUCT \(INV_NUM, PROD_NUM, QUANT_SOLD\)) Tj T*
+() Tj T*
+(The database is now in 3NF: no partial dependencies, no transitive dependencies,) Tj T*
+(and each table represents a single subject.) Tj T*
+() Tj T*
+(See file: Q7_3NF_diagrams.drawio for the visual dependency diagrams.) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+
+6 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Contents 10 0 R /Resources <</Font <</F1 11 0 R>>>>>>
+endobj
+
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000063 00000 n 
+0000002909 00000 n 
+0000005868 00000 n 
+0000008518 00000 n 
+0000009235 00000 n 
+0000000232 00000 n 
+0000003031 00000 n 
+0000005990 00000 n 
+0000008640 00000 n 
+0000000137 00000 n 
+trailer
+<</Size 12 /Root 1 0 R>>
+startxref
+9358
+%%EOF

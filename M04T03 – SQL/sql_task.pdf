@@ -1,0 +1,321 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Courier
+>>
+endobj
+
+3 0 obj
+<< /Length 5419 >>
+stream
+0.118 0.235 0.471 rg
+0.0 812.0 595.0 30.0 re f
+1.000 1.000 1.000 rg
+BT /F1 13 Tf 40 821 Td
+(HyperionDev  L1 AI Engineering  |  M04T03 ? SQL Task) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf ET
+0.8 0.8 0.8 RG 0.3 w 40 799.0 m 555 799.0 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 795.9 Td (-- HyperionDev  Level 1 AI Engineering) Tj ET
+0.000 0.000 0.000 rg
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 785.8 Td (-- M04T03  SQL Task) Tj ET
+0.000 0.000 0.000 rg
+0.8 0.8 0.8 RG 0.3 w 40 772.6 m 555 772.6 l S 0 G
+0.8 0.8 0.8 RG 0.3 w 40 756.4 m 555 756.4 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 748.3 Td (-- Employee table \\(pages 7-8\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 738.2 Td (CREATE TABLE Employee \() Tj ET
+BT /F2 7.5 Tf 40 728.1 Td (    EmployeeID    int          NOT NULL,) Tj ET
+BT /F2 7.5 Tf 40 718.0 Td (    LastName      varchar\(255\) NOT NULL,) Tj ET
+BT /F2 7.5 Tf 40 707.8 Td (    FirstName     varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 697.7 Td (    Address       varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 687.6 Td (    PhoneNumber   varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 677.5 Td (    PRIMARY KEY \(EmployeeID\)) Tj ET
+BT /F2 7.5 Tf 40 667.3 Td (\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 652.1 Td (-- albums table \\(page 13\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 642.0 Td (CREATE TABLE albums \() Tj ET
+BT /F2 7.5 Tf 40 631.9 Td (    Artist            varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 621.8 Td (    Album             varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 611.6 Td (    Released          int,) Tj ET
+BT /F2 7.5 Tf 40 601.5 Td (    Genre             varchar\(100\),) Tj ET
+BT /F2 7.5 Tf 40 591.4 Td (    sales_in_millions decimal\(6,2\)) Tj ET
+BT /F2 7.5 Tf 40 581.3 Td (\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 566.1 Td (-- VideoGame table \\(page 15\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 556.0 Td (CREATE TABLE VideoGame \() Tj ET
+BT /F2 7.5 Tf 40 545.8 Td (    ID          int          NOT NULL,) Tj ET
+BT /F2 7.5 Tf 40 535.7 Td (    Name        varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 525.6 Td (    DeveloperID int,) Tj ET
+BT /F2 7.5 Tf 40 515.5 Td (    Genre       varchar\(100\),) Tj ET
+BT /F2 7.5 Tf 40 505.3 Td (    PRIMARY KEY \(ID\)) Tj ET
+BT /F2 7.5 Tf 40 495.2 Td (\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 480.0 Td (-- GameDeveloper table \\(page 15\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 469.9 Td (CREATE TABLE GameDeveloper \() Tj ET
+BT /F2 7.5 Tf 40 459.8 Td (    ID      int          NOT NULL,) Tj ET
+BT /F2 7.5 Tf 40 449.6 Td (    Name    varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 439.5 Td (    Country varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 429.4 Td (    PRIMARY KEY \(ID\)) Tj ET
+BT /F2 7.5 Tf 40 419.3 Td (\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 404.1 Td (-- Customer table \\(pages 19-20\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 394.0 Td (CREATE TABLE Customer \() Tj ET
+BT /F2 7.5 Tf 40 383.8 Td (    CustomerID   int          NOT NULL,) Tj ET
+BT /F2 7.5 Tf 40 373.7 Td (    CustomerName varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 363.6 Td (    Address      varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 353.5 Td (    City         varchar\(255\),) Tj ET
+BT /F2 7.5 Tf 40 343.3 Td (    PRIMARY KEY \(CustomerID\)) Tj ET
+BT /F2 7.5 Tf 40 333.2 Td (\);) Tj ET
+0.8 0.8 0.8 RG 0.3 w 40 309.9 m 555 309.9 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 301.8 Td (-- Insert into Employee: specific columns \\(method 1, page 9\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 291.7 Td (INSERT INTO Employee \(EmployeeID, LastName, FirstName, Address, PhoneNumber\)) Tj ET
+BT /F2 7.5 Tf 40 281.6 Td (VALUES \(1234, 'Smith', 'John', '25 Oak Rd', '0837856767'\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 266.4 Td (-- Insert omitting optional columns -- FirstName and Address will be NULL) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 256.3 Td (INSERT INTO Employee \(EmployeeID, LastName, PhoneNumber\)) Tj ET
+BT /F2 7.5 Tf 40 246.1 Td (VALUES \(1321, 'Jones', '0827546787'\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 230.9 Td (-- Insert multiple rows at once \\(page 10\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 220.8 Td (INSERT INTO Employee \(EmployeeID, LastName, FirstName, Address, PhoneNumber\)) Tj ET
+BT /F2 7.5 Tf 40 210.7 Td (VALUES) Tj ET
+BT /F2 7.5 Tf 40 200.6 Td (    \(5678, 'Brown',  'Robert', '5 Pine Str',   '0821116789'\),) Tj ET
+BT /F2 7.5 Tf 40 190.4 Td (    \(9112, 'Davies', 'Emily',  '25 Maple Ave',  '0876543210'\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 175.3 Td (-- Insert into albums: all columns, no column list \\(method 2, page 10\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 165.1 Td (INSERT INTO albums) Tj ET
+BT /F2 7.5 Tf 40 155.0 Td (VALUES) Tj ET
+BT /F2 7.5 Tf 40 144.9 Td (    \('Michael Jackson', 'Thriller',                  1982, 'pop',  70\),) Tj ET
+BT /F2 7.5 Tf 40 134.8 Td (    \('AC/DC',           'Back in Black',             1980, 'rock', 50\),) Tj ET
+BT /F2 7.5 Tf 40 124.6 Td (    \('Pink Floyd',      'The Dark Side of the Moon', 1973, 'rock', 45\),) Tj ET
+BT /F2 7.5 Tf 40 114.5 Td (    \('Whitney Houston', 'The Bodyguard',             1992, 'soul', 44\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 99.3 Td (-- Insert into GameDeveloper) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 89.2 Td (INSERT INTO GameDeveloper \(ID, Name, Country\)) Tj ET
+BT /F2 7.5 Tf 40 79.1 Td (VALUES) Tj ET
+BT /F2 7.5 Tf 40 68.9 Td (    \(1, 'Blizzard', 'USA'\),) Tj ET
+endstream
+endobj
+
+4 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/MediaBox [0 0 595 842]
+/Contents 3 0 R
+/Resources << /Font << /F1 1 0 R /F2 2 0 R >> >>
+>>
+endobj
+
+5 0 obj
+<< /Length 5216 >>
+stream
+BT /F2 7.5 Tf ET
+BT /F2 7.5 Tf 40 792.0 Td (    \(2, 'Nintendo', 'Japan'\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 776.8 Td (-- Insert into VideoGame) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 766.7 Td (INSERT INTO VideoGame \(ID, Name, DeveloperID, Genre\)) Tj ET
+BT /F2 7.5 Tf 40 756.6 Td (VALUES) Tj ET
+BT /F2 7.5 Tf 40 746.4 Td (    \(1, 'Super Mario Bros.',   2, 'platformer'\),) Tj ET
+BT /F2 7.5 Tf 40 736.3 Td (    \(2, 'World of Warcraft',   1, 'MMORPG'\),) Tj ET
+BT /F2 7.5 Tf 40 726.2 Td (    \(3, 'The Legend of Zelda', 2, 'adventure'\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 711.0 Td (-- Insert into Customer) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 700.9 Td (INSERT INTO Customer \(CustomerID, CustomerName, Address, City\)) Tj ET
+BT /F2 7.5 Tf 40 690.8 Td (VALUES) Tj ET
+BT /F2 7.5 Tf 40 680.6 Td (    \(1, 'Maria Anderson', '23 York St',     'New York'\),) Tj ET
+BT /F2 7.5 Tf 40 670.5 Td (    \(2, 'Jackson Peters', '124 River Rd',   'Berlin'\),) Tj ET
+BT /F2 7.5 Tf 40 660.4 Td (    \(3, 'Thomas Hardy',   '455 Hanover Sq', 'London'\),) Tj ET
+BT /F2 7.5 Tf 40 650.2 Td (    \(4, 'Kelly Martins',  '55 Loop St',     'Cape Town'\);) Tj ET
+0.8 0.8 0.8 RG 0.3 w 40 627.0 m 555 627.0 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 618.9 Td (-- Select all columns \\(page 11\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 608.7 Td (SELECT * FROM Employee;) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 593.5 Td (-- Select specific columns only \\(page 11\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 583.4 Td (SELECT FirstName, LastName FROM Employee;) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 568.2 Td (-- ORDER BY descending \\(page 12\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 558.1 Td (SELECT * FROM Employee ORDER BY FirstName DESC;) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 542.9 Td (-- ORDER BY ascending on albums) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 532.8 Td (SELECT * FROM albums ORDER BY Released ASC;) Tj ET
+0.8 0.8 0.8 RG 0.3 w 40 509.5 m 555 509.5 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 501.4 Td (-- Exact match: employees named John \\(page 12\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 491.3 Td (SELECT * FROM Employee WHERE FirstName = 'John';) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 476.1 Td (-- AND + comparison: rock albums with sales <= 50 million \\(page 13\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 466.0 Td (SELECT *) Tj ET
+BT /F2 7.5 Tf 40 455.8 Td (FROM albums) Tj ET
+BT /F2 7.5 Tf 40 445.7 Td (WHERE Genre = 'rock' AND sales_in_millions <= 50) Tj ET
+BT /F2 7.5 Tf 40 435.6 Td (ORDER BY Released;) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 420.4 Td (-- IN: pop and soul albums \\(page 14\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 410.3 Td (SELECT * FROM albums WHERE Genre IN \('pop', 'soul'\);) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 395.1 Td (-- BETWEEN: albums released between 1975 and 1985 \\(page 15\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 385.0 Td (SELECT COUNT\(*\) FROM albums WHERE Released BETWEEN 1975 AND 1985;) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 369.8 Td (-- LIKE: artists whose name starts with 'M' \\(page 14\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 359.7 Td (SELECT * FROM albums WHERE Artist LIKE 'M%';) Tj ET
+0.8 0.8 0.8 RG 0.3 w 40 336.4 m 555 336.4 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 328.3 Td (-- MAX: most recent release year \\(page 14\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 318.1 Td (SELECT MAX\(Released\) FROM albums;) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 303.0 Td (-- COUNT with BETWEEN \\(page 15\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 292.8 Td (SELECT COUNT\(*\) FROM albums WHERE Released BETWEEN 1975 AND 1985;) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 277.6 Td (-- SUM with GROUP BY: total sales by genre \\(page 15\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 267.5 Td (SELECT Genre, SUM\(sales_in_millions\) AS total_sales) Tj ET
+BT /F2 7.5 Tf 40 257.4 Td (FROM albums) Tj ET
+BT /F2 7.5 Tf 40 247.3 Td (GROUP BY Genre;) Tj ET
+0.8 0.8 0.8 RG 0.3 w 40 224.0 m 555 224.0 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 215.9 Td (-- INNER JOIN: combine VideoGame and GameDeveloper \\(page 16\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 205.8 Td (SELECT VideoGame.Name, VideoGame.Genre,) Tj ET
+BT /F2 7.5 Tf 40 195.6 Td (       GameDeveloper.Name, GameDeveloper.Country) Tj ET
+BT /F2 7.5 Tf 40 185.5 Td (FROM VideoGame) Tj ET
+BT /F2 7.5 Tf 40 175.4 Td (INNER JOIN GameDeveloper) Tj ET
+BT /F2 7.5 Tf 40 165.3 Td (ON VideoGame.DeveloperID = GameDeveloper.ID;) Tj ET
+0.8 0.8 0.8 RG 0.3 w 40 142.0 m 555 142.0 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 133.9 Td (-- Column alias \\(page 18\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 123.7 Td (SELECT Name AS Developer FROM GameDeveloper;) Tj ET
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 108.6 Td (-- Table aliases in a JOIN \\(page 18\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 98.4 Td (SELECT games.Name, games.Genre, devs.Name AS Developer, devs.Country) Tj ET
+BT /F2 7.5 Tf 40 88.3 Td (FROM VideoGame AS games) Tj ET
+BT /F2 7.5 Tf 40 78.2 Td (INNER JOIN GameDeveloper AS devs) Tj ET
+BT /F2 7.5 Tf 40 68.1 Td (ON games.DeveloperID = devs.ID;) Tj ET
+endstream
+endobj
+
+6 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/MediaBox [0 0 595 842]
+/Contents 5 0 R
+/Resources << /Font << /F1 1 0 R /F2 2 0 R >> >>
+>>
+endobj
+
+7 0 obj
+<< /Length 1458 >>
+stream
+BT /F2 7.5 Tf ET
+0.8 0.8 0.8 RG 0.3 w 40 778.8 m 555 778.8 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 770.7 Td (-- CTE: GameInfo joins VideoGame and GameDeveloper \\(page 19\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 760.6 Td (WITH GameInfo AS \() Tj ET
+BT /F2 7.5 Tf 40 750.5 Td (    SELECT games.ID, games.Name AS GameName, games.Genre,) Tj ET
+BT /F2 7.5 Tf 40 740.4 Td (           devs.Name AS Developer) Tj ET
+BT /F2 7.5 Tf 40 730.2 Td (    FROM VideoGame AS games) Tj ET
+BT /F2 7.5 Tf 40 720.1 Td (    INNER JOIN GameDeveloper AS devs) Tj ET
+BT /F2 7.5 Tf 40 710.0 Td (    ON games.DeveloperID = devs.ID) Tj ET
+BT /F2 7.5 Tf 40 699.9 Td (\)) Tj ET
+BT /F2 7.5 Tf 40 689.7 Td (SELECT DISTINCT Developer) Tj ET
+BT /F2 7.5 Tf 40 679.6 Td (FROM GameInfo;) Tj ET
+0.8 0.8 0.8 RG 0.3 w 40 656.3 m 555 656.3 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 648.2 Td (-- Update Customer 1 with a new address and city \\(page 20\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 638.1 Td (UPDATE Customer) Tj ET
+BT /F2 7.5 Tf 40 628.0 Td (SET Address = '78 Oak St', City = 'Los Angeles') Tj ET
+BT /F2 7.5 Tf 40 617.8 Td (WHERE CustomerID = 1;) Tj ET
+0.8 0.8 0.8 RG 0.3 w 40 594.6 m 555 594.6 l S 0 G
+0.392 0.549 0.392 rg
+BT /F2 7.5 Tf 40 586.5 Td (-- Delete the customer named Jackson Peters \\(page 20\\)) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 7.5 Tf 40 576.3 Td (DELETE FROM Customer) Tj ET
+BT /F2 7.5 Tf 40 566.2 Td (WHERE CustomerName = 'Jackson Peters';) Tj ET
+endstream
+endobj
+
+8 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/MediaBox [0 0 595 842]
+/Contents 7 0 R
+/Resources << /Font << /F1 1 0 R /F2 2 0 R >> >>
+>>
+endobj
+
+9 0 obj
+<<
+/Type /Pages
+/Kids [4 0 R 6 0 R 8 0 R]
+/Count 3
+>>
+endobj
+
+10 0 obj
+<<
+/Type /Catalog
+/Pages 9 0 R
+>>
+endobj
+
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000091 00000 n 
+0000000160 00000 n 
+0000005632 00000 n 
+0000005771 00000 n 
+0000011040 00000 n 
+0000011179 00000 n 
+0000012690 00000 n 
+0000012829 00000 n 
+0000012899 00000 n 
+trailer
+<< /Size 11 /Root 10 0 R >>
+startxref
+12944
+%%EOF

@@ -1,0 +1,137 @@
+My Database Theory
+=================
+
+1 Difference Between Data and Information
+==========================================
+Data refers to raw, unprocessed facts, figures, or symbols that on their own
+have little or no meaning. For example, the number "42" is a piece of data.
+Information, on the other hand, is data that has been processed, organised, and
+given context to provide meaning. If we know that "42" represents the age of a
+person named John, it becomes information. In essence, data is the input and
+information is the meaningful output produced after processing that data.
+
+
+2 What is Metadata?
+====================
+Metadata is data that describes other data. It provides context and structure
+that makes raw data easier to understand and interpret. For example, if a
+database stores temperature readings (17, 25, 20, 24...), the metadata would
+include information such as the unit of measurement (Celsius), the time period
+the readings were taken, and the location. Metadata is essential for extracting
+meaning from data and is a simple but critical form of data processing.
+
+
+3 What is a DBMS and What Are Its Advantages?
+===============================================
+A Database Management System (DBMS) is a collection of programs that manages
+the database structure and controls access to the data stored in the database.
+It acts as an intermediary between the user and the database, receiving
+application requests and translating them into the complex operations needed to
+fulfil those requests.
+
+Advantages of a DBMS:
+- Better data access and security: The DBMS manages database access while
+  enforcing data privacy and security policies, giving users efficient access
+  to data.
+- Improved data integration: It facilitates multiple end-users accessing data
+  in a well-managed manner, providing a clearer and more integrated view of an
+  organisation's operations.
+- Smooth data manipulation: It enables quick answers to on-the-spot requests
+  for reading or updating data.
+- High-quality information: It supports quicker and more informed
+  decision-making, increasing end-user productivit.
+
+
+4. Operational vs Analytical Databases
+=======================================
+Operational Databases (OLTP  Online Transaction Processing):
+These are designed to support the day-to-day operations of an organisation.
+They store and manage current, detailed data and are optimised for speed and
+efficiency in handling frequent updates and retrievals.
+Example: An inventory management system that tracks stock levels in real time.
+
+Analytical Databases (OLAP  Online Analytical Processing):
+These are designed for data analysis and business intelligence. Unlike
+operational databases, they store historical and aggregated data, optimised for
+complex queries and reporting to help businesses gain insights into trends and
+performance.
+Example: A data warehouse that stores years of sales data to identify seasonal
+trends and support strategic planning decisions.
+
+Key Differences:
+- Operational databases handle current data; analytical databases handle
+  historical data.
+- Operational databases are optimised for transactions; analytical databases
+  are optimised for complex queries and reporting.
+- Operational databases support daily operations; analytical databases support
+  decision-making.
+
+
+5. Types of Data and Use Cases for NoSQL Databases
+=================================================
+Databases can be classified by their structure into three types of data:
+
+- Structured data: Highly organised data arranged in a predefined format
+  (rows and columns), as in relational databases.
+- Semi-structured data: Has some organisation but lacks the rigidity of
+  structured data. Common formats include XML and JSON.
+- Unstructured data: Has no predefined format and includes various types such
+  as text documents, images, and videos
+
+NoSQL databases are most effective in use cases that involve:
+- Large volumes of unstructured or semi-structured data (e.g., social media
+  posts, user-generated content)
+- Applications that need high scalability and performance under heavy loads
+  (e.g., real-time web applications).
+- Scenarios where the data model evolves rapidly and a flexible schema is
+  needed (e.g., content management systems, e-commerce catalogues).
+- Big data and real-time analytics where traditional relational databases
+  would struggle with volume and velocity.
+
+
+6. DBMS Without Server Configuration and Its Advantages
+=====================================================
+SQLite is the DBMS that does not require server configuration. It is a
+lightweight, file-based relational database that is self-contained and
+serverless.
+
+Advantages of SQLite
+- No server setup required: It runs entirely within the application, removing
+  the complexity of configuring and maintaining a separate database server.
+- Simplicity: Easy to set up and use, making it ideal for beginners and
+  small-scale projects.
+- Portability: The entire database is stored in a single file, which can be
+  easily copied, moved, or shared.
+- Reliability and speed: Despite its compact size, SQLite offers strong
+  reliability and performance.
+- Ideal for embedded systems: It is widely used in mobile applications,
+  embedded systems, and any environment where a lightweight database solution
+  is needed without the overhead of a full server-based DBMS.
+
+
+7. ACID Properties in the Context of a DBMS
+============================================
+ACID stands for Atomicity, Consistency, Isolation, and Durability. These are
+the four key properties that relational DBMSs use to ensure data integrity and
+consistency during database transactions.
+
+- Atomicity: A transaction is treated as a single, indivisible unit. Either
+  all operations within the transaction are completed successfully, or none
+  of them are applied. This prevents partial updates that could corrupt data.
+
+- Consistency: Every transaction brings the database from one valid state to
+  another. The database must always remain in a consistent state before and
+  after a transaction, ensuring data correctness at all times.
+
+- Isolation: Transactions occurring simultaneously (in parallel) are executed
+  independently of one another. The intermediate state of a transaction is
+  not visible to other transactions, preventing conflicts and ensuring data
+  integrity under concurrent access.
+
+- Durability: Once a transaction has been committed, the changes are permanent
+  and will persist even in the event of a system crash or failure. The DBMS
+  uses mechanisms such as logs and backups to ensure durability.
+
+Together, ACID properties guarantee that database transactions are complete,
+accurate, independent, and permanent, making relational DBMSs reliable for
+critical data operations.

@@ -1,0 +1,678 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding>>
+endobj
+
+2 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding>>
+endobj
+
+3 0 obj
+<</Length 3388>>
+stream
+0.000 0.000 0.000 rg
+BT /F2 13 Tf 120.0 560.0 Td (Q5 - INVOICE Table Dependency Diagram \(1NF\)) Tj ET
+1.000 0.500 0.000 rg
+BT /F1 8 Tf 50.0 540.0 Td (Orange+underline=PK) Tj ET
+0.000 0.500 0.000 rg
+BT /F1 8 Tf 210.0 540.0 Td (Arrow above=Full dep) Tj ET
+0.900 0.400 0.000 rg
+BT /F1 8 Tf 370.0 540.0 Td (Arrow below=Partial dep) Tj ET
+0.800 0.000 0.000 rg
+BT /F1 8 Tf 560.0 540.0 Td (Arrow below=Transitive) Tj ET
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+101.0 250.0 80.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 124.0 261.5 Td (INV_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+124.0 260.0 m
+158.0 260.0 l
+S
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+181.0 250.0 80.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 201.6 261.5 Td (PROD_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+201.6 260.0 m
+240.4 260.0 l
+S
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+261.0 250.0 80.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 279.1 261.5 Td (SALE_DATE) Tj ET
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+341.0 250.0 80.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 356.7 261.5 Td (PROD_LABEL) Tj ET
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+421.0 250.0 80.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 439.1 261.5 Td (VEND_CODE) Tj ET
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+501.0 250.0 80.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 519.1 261.5 Td (VEND_NAME) Tj ET
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+581.0 250.0 80.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 596.7 261.5 Td (QUANT_SOLD) Tj ET
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+661.0 250.0 80.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 676.7 261.5 Td (PROD_PRICE) Tj ET
+0.000 0.500 0.000 RG
+0.9 w
+141.0 282.0 m
+141.0 315.8 l
+S
+221.0 282.0 m
+221.0 315.8 l
+S
+141.0 315.8 m
+221.0 315.8 l
+S
+181.0 315.8 m
+181.0 357.0 l
+S
+181.0 357.0 m
+621.0 357.0 l
+S
+621.0 357.0 m
+621.0 289.0 l
+S
+0.000 0.500 0.000 rg
+621.0 282.0 m
+617.0 289.2 l
+625.0 289.2 l
+h
+f
+0.000 0.500 0.000 rg
+BT /F1 7 Tf 385.8 359.0 Td (Full dep) Tj ET
+0.900 0.400 0.000 RG
+0.9 w
+141.0 250.0 m
+141.0 212.0 l
+301.0 212.0 l
+301.0 243.0 l
+S
+0.900 0.400 0.000 rg
+301.0 250.0 m
+297.0 242.8 l
+305.0 242.8 l
+h
+f
+0.900 0.400 0.000 rg
+BT /F1 7 Tf 165.0 203.0 Td (Partial) Tj ET
+0.900 0.400 0.000 RG
+0.9 w
+221.0 250.0 m
+221.0 192.0 l
+381.0 192.0 l
+381.0 243.0 l
+S
+0.900 0.400 0.000 rg
+381.0 250.0 m
+377.0 242.8 l
+385.0 242.8 l
+h
+f
+0.900 0.400 0.000 rg
+BT /F1 7 Tf 245.0 183.0 Td (Partial) Tj ET
+0.900 0.400 0.000 RG
+0.9 w
+221.0 250.0 m
+221.0 172.0 l
+461.0 172.0 l
+461.0 243.0 l
+S
+0.900 0.400 0.000 rg
+461.0 250.0 m
+457.0 242.8 l
+465.0 242.8 l
+h
+f
+0.900 0.400 0.000 rg
+BT /F1 7 Tf 257.0 163.0 Td (Partial) Tj ET
+0.900 0.400 0.000 RG
+0.9 w
+221.0 250.0 m
+221.0 152.0 l
+701.0 152.0 l
+701.0 243.0 l
+S
+0.900 0.400 0.000 rg
+701.0 250.0 m
+697.0 242.8 l
+705.0 242.8 l
+h
+f
+0.900 0.400 0.000 rg
+BT /F1 7 Tf 293.0 143.0 Td (Partial) Tj ET
+0.800 0.000 0.000 RG
+0.9 w
+461.0 250.0 m
+461.0 125.0 l
+541.0 125.0 l
+541.0 243.0 l
+S
+0.800 0.000 0.000 rg
+541.0 250.0 m
+537.0 242.8 l
+545.0 242.8 l
+h
+f
+0.800 0.000 0.000 rg
+BT /F1 7 Tf 473.0 116.0 Td (Transitive) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 50.0 85.0 Td (Full:  \(INV_NUM, PROD_NUM\) -> QUANT_SOLD) Tj ET
+BT /F1 9 Tf 50.0 70.0 Td (Partial:  INV_NUM -> SALE_DATE   |   PROD_NUM -> PROD_LABEL, VEND_CODE, PROD_PRICE) Tj ET
+0.800 0.000 0.000 rg
+BT /F1 9 Tf 50.0 55.0 Td (Transitive:  VEND_CODE -> VEND_NAME) Tj ET
+endstream
+endobj
+
+4 0 obj
+<</Type /Page /Parent 9 0 R /MediaBox [0 0 842 595] /Contents 3 0 R /Resources <</Font <</F1 1 0 R /F2 2 0 R>>>>>>
+endobj
+
+5 0 obj
+<</Length 3722>>
+stream
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 20.0 805.0 Td (Q6 - Dependency Diagrams After Removing Partial Dependencies \(2NF\)) Tj ET
+BT /F1 8 Tf 20.0 788.0 Td (Partial deps resolved. 3 tables created. Transitive dep still present in PRODUCT.) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 20.0 742.0 Td (Table: INVOICE) Tj ET
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+20.0 700.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 68.0 711.5 Td (INV_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+68.0 710.0 m
+102.0 710.0 l
+S
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+150.0 700.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 193.1 711.5 Td (SALE_DATE) Tj ET
+0.000 0.500 0.000 RG
+0.9 w
+85.0 732.0 m
+85.0 754.0 l
+S
+85.0 754.0 m
+215.0 754.0 l
+215.0 739.0 l
+S
+0.000 0.500 0.000 rg
+215.0 732.0 m
+211.0 739.2 l
+219.0 739.2 l
+h
+f
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 20.0 562.0 Td (Table: PRODUCT) Tj ET
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+20.0 520.0 97.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 49.1 531.5 Td (PROD_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+49.1 530.0 m
+87.9 530.0 l
+S
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+117.0 520.0 97.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 141.2 531.5 Td (PROD_LABEL) Tj ET
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+214.0 520.0 97.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 240.6 531.5 Td (VEND_CODE) Tj ET
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+311.0 520.0 97.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 337.6 531.5 Td (VEND_NAME) Tj ET
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+408.0 520.0 97.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 432.2 531.5 Td (PROD_PRICE) Tj ET
+0.000 0.500 0.000 RG
+0.9 w
+68.5 552.0 m
+68.5 574.0 l
+S
+68.5 574.0 m
+165.5 574.0 l
+165.5 559.0 l
+S
+0.000 0.500 0.000 rg
+165.5 552.0 m
+161.5 559.2 l
+169.5 559.2 l
+h
+f
+68.5 574.0 m
+262.5 574.0 l
+262.5 559.0 l
+S
+0.000 0.500 0.000 rg
+262.5 552.0 m
+258.5 559.2 l
+266.5 559.2 l
+h
+f
+68.5 574.0 m
+359.5 574.0 l
+359.5 559.0 l
+S
+0.000 0.500 0.000 rg
+359.5 552.0 m
+355.5 559.2 l
+363.5 559.2 l
+h
+f
+68.5 574.0 m
+456.5 574.0 l
+456.5 559.0 l
+S
+0.000 0.500 0.000 rg
+456.5 552.0 m
+452.5 559.2 l
+460.5 559.2 l
+h
+f
+0.800 0.000 0.000 RG
+0.9 w
+262.5 520.0 m
+262.5 492.0 l
+359.5 492.0 l
+359.5 513.0 l
+S
+0.800 0.000 0.000 rg
+359.5 520.0 m
+355.5 512.8 l
+363.5 512.8 l
+h
+f
+0.800 0.000 0.000 rg
+BT /F1 7 Tf 277.1 483.0 Td (Transitive!) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 20.0 392.0 Td (Table: INVOICE_PRODUCT) Tj ET
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+20.0 350.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 68.0 361.5 Td (INV_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+68.0 360.0 m
+102.0 360.0 l
+S
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+150.0 350.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 195.6 361.5 Td (PROD_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+195.6 360.0 m
+234.4 360.0 l
+S
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+280.0 350.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 320.7 361.5 Td (QUANT_SOLD) Tj ET
+0.000 0.500 0.000 RG
+0.9 w
+85.0 382.0 m
+85.0 394.0 l
+S
+215.0 382.0 m
+215.0 394.0 l
+S
+85.0 394.0 m
+215.0 394.0 l
+S
+150.0 394.0 m
+150.0 408.0 l
+S
+150.0 408.0 m
+345.0 408.0 l
+345.0 389.0 l
+S
+0.000 0.500 0.000 rg
+345.0 382.0 m
+341.0 389.2 l
+349.0 389.2 l
+h
+f
+0.000 0.400 0.000 rg
+BT /F2 10 Tf 20.0 302.0 Td (2NF Result \(3 tables\):) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 20.0 284.0 Td (  INVOICE \(INV_NUM, SALE_DATE\)) Tj ET
+BT /F1 9 Tf 20.0 268.0 Td (  PRODUCT \(PROD_NUM, PROD_LABEL, VEND_CODE, VEND_NAME, PROD_PRICE\)) Tj ET
+BT /F1 9 Tf 20.0 252.0 Td (  INVOICE_PRODUCT \(INV_NUM, PROD_NUM, QUANT_SOLD\)) Tj ET
+0.800 0.000 0.000 rg
+BT /F1 9 Tf 20.0 236.0 Td (  Transitive dep VEND_CODE->VEND_NAME still in PRODUCT -- resolved in Q7) Tj ET
+endstream
+endobj
+
+6 0 obj
+<</Type /Page /Parent 9 0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources <</Font <</F1 1 0 R /F2 2 0 R>>>>>>
+endobj
+
+7 0 obj
+<</Length 4083>>
+stream
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 20.0 805.0 Td (Q7 - Dependency Diagrams After Removing Transitive Dependencies \(3NF\)) Tj ET
+BT /F1 8 Tf 20.0 788.0 Td (VEND_CODE->VEND_NAME extracted to new VENDOR table. Database now fully in 3NF.) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 20.0 742.0 Td (Table: INVOICE) Tj ET
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+20.0 700.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 68.0 711.5 Td (INV_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+68.0 710.0 m
+102.0 710.0 l
+S
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+150.0 700.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 193.1 711.5 Td (SALE_DATE) Tj ET
+0.000 0.500 0.000 RG
+0.9 w
+85.0 732.0 m
+85.0 754.0 l
+S
+85.0 754.0 m
+215.0 754.0 l
+215.0 739.0 l
+S
+0.000 0.500 0.000 rg
+215.0 732.0 m
+211.0 739.2 l
+219.0 739.2 l
+h
+f
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 20.0 562.0 Td (Table: PRODUCT) Tj ET
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+20.0 520.0 100.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 50.6 531.5 Td (PROD_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+50.6 530.0 m
+89.4 530.0 l
+S
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+120.0 520.0 100.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 145.7 531.5 Td (PROD_LABEL) Tj ET
+0.850 0.920 1.000 rg
+0.420 0.550 0.750 RG
+0.75 w
+220.0 520.0 100.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 248.1 531.5 Td (VEND_CODE) Tj ET
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+320.0 520.0 100.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 345.7 531.5 Td (PROD_PRICE) Tj ET
+0.000 0.500 0.000 RG
+0.9 w
+70.0 552.0 m
+70.0 574.0 l
+S
+70.0 574.0 m
+170.0 574.0 l
+170.0 559.0 l
+S
+0.000 0.500 0.000 rg
+170.0 552.0 m
+166.0 559.2 l
+174.0 559.2 l
+h
+f
+70.0 574.0 m
+270.0 574.0 l
+270.0 559.0 l
+S
+0.000 0.500 0.000 rg
+270.0 552.0 m
+266.0 559.2 l
+274.0 559.2 l
+h
+f
+70.0 574.0 m
+370.0 574.0 l
+370.0 559.0 l
+S
+0.000 0.500 0.000 rg
+370.0 552.0 m
+366.0 559.2 l
+374.0 559.2 l
+h
+f
+0.000 0.500 0.000 rg
+BT /F2 11 Tf 385.0 562.0 Td (VENDOR \(new\)) Tj ET
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+385.0 520.0 95.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 410.6 531.5 Td (VEND_CODE) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+410.6 530.0 m
+454.4 530.0 l
+S
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+480.0 520.0 95.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 505.6 531.5 Td (VEND_NAME) Tj ET
+0.000 0.500 0.000 RG
+0.9 w
+432.5 552.0 m
+432.5 574.0 l
+527.5 574.0 l
+527.5 559.0 l
+S
+0.000 0.500 0.000 rg
+527.5 552.0 m
+523.5 559.2 l
+531.5 559.2 l
+h
+f
+0.200 0.200 0.800 RG
+0.9 w
+320.0 536.0 m
+385.0 536.0 l
+S
+0.200 0.200 0.800 rg
+385.0 536.0 m
+377.8 540.0 l
+377.8 532.0 l
+h
+f
+0.200 0.200 0.800 rg
+BT /F1 7 Tf 325.0 539.0 Td (FK) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 20.0 392.0 Td (Table: INVOICE_PRODUCT) Tj ET
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+20.0 350.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 68.0 361.5 Td (INV_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+68.0 360.0 m
+102.0 360.0 l
+S
+1.000 0.900 0.800 rg
+0.840 0.710 0.340 RG
+0.75 w
+150.0 350.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 195.6 361.5 Td (PROD_NUM) Tj ET
+0.000 0.000 0.000 RG
+0.4 w
+195.6 360.0 m
+234.4 360.0 l
+S
+1.000 1.000 1.000 rg
+0.000 0.000 0.000 RG
+0.75 w
+280.0 350.0 130.0 32.0 re
+B
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 320.7 361.5 Td (QUANT_SOLD) Tj ET
+0.000 0.500 0.000 RG
+0.9 w
+85.0 382.0 m
+85.0 394.0 l
+S
+215.0 382.0 m
+215.0 394.0 l
+S
+85.0 394.0 m
+215.0 394.0 l
+S
+150.0 394.0 m
+150.0 408.0 l
+S
+150.0 408.0 m
+345.0 408.0 l
+345.0 389.0 l
+S
+0.000 0.500 0.000 rg
+345.0 382.0 m
+341.0 389.2 l
+349.0 389.2 l
+h
+f
+0.000 0.400 0.000 rg
+BT /F2 10 Tf 20.0 302.0 Td (3NF Final Result \(4 tables\):) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 20.0 284.0 Td (  INVOICE \(INV_NUM, SALE_DATE\)) Tj ET
+BT /F1 9 Tf 20.0 268.0 Td (  PRODUCT \(PROD_NUM, PROD_LABEL, VEND_CODE [FK], PROD_PRICE\)) Tj ET
+BT /F1 9 Tf 20.0 252.0 Td (  VENDOR \(VEND_CODE, VEND_NAME\)) Tj ET
+BT /F1 9 Tf 20.0 236.0 Td (  INVOICE_PRODUCT \(INV_NUM, PROD_NUM, QUANT_SOLD\)) Tj ET
+0.000 0.500 0.000 rg
+BT /F1 9 Tf 20.0 220.0 Td (  No partial deps. No transitive deps. Each table = single subject. Fully normalised.) Tj ET
+endstream
+endobj
+
+8 0 obj
+<</Type /Page /Parent 9 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources <</Font <</F1 1 0 R /F2 2 0 R>>>>>>
+endobj
+
+9 0 obj
+<</Type /Pages /Kids [4 0 R 6 0 R 8 0 R] /Count 3>>
+endobj
+
+10 0 obj
+<</Type /Catalog /Pages 9 0 R>>
+endobj
+
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000111 00000 n 
+0000000212 00000 n 
+0000003651 00000 n 
+0000003782 00000 n 
+0000007555 00000 n 
+0000007686 00000 n 
+0000011820 00000 n 
+0000011951 00000 n 
+0000012019 00000 n 
+trailer
+<</Size 11 /Root 10 0 R>>
+startxref
+12068
+%%EOF

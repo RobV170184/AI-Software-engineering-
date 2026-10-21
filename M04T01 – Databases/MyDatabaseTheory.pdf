@@ -1,0 +1,214 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<</Type /Catalog /Pages 2 0 R>>
+endobj
+
+2 0 obj
+<</Type /Pages /Kids [3 0 R 4 0 R 5 0 R] /Count 3>>
+endobj
+
+9 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding>>
+endobj
+
+6 0 obj
+<</Length 2913>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 780 Tm
+14 TL
+(My Database Theory) Tj T*
+(=================) Tj T*
+() Tj T*
+(1 Difference Between Data and Information) Tj T*
+(==========================================) Tj T*
+(Data refers to raw, unprocessed facts, figures, or symbols that on their own) Tj T*
+(have little or no meaning. For example, the number "42" is a piece of data.) Tj T*
+(Information, on the other hand, is data that has been processed, organised, and) Tj T*
+(given context to provide meaning. If we know that "42" represents the age of a) Tj T*
+(person named John, it becomes information. In essence, data is the input and) Tj T*
+(information is the meaningful output produced after processing that data.) Tj T*
+() Tj T*
+() Tj T*
+(2 What is Metadata?) Tj T*
+(====================) Tj T*
+(Metadata is data that describes other data. It provides context and structure) Tj T*
+(that makes raw data easier to understand and interpret. For example, if a) Tj T*
+(database stores temperature readings \(17, 25, 20, 24...\), the metadata would) Tj T*
+(include information such as the unit of measurement \(Celsius\), the time period) Tj T*
+(the readings were taken, and the location. Metadata is essential for extracting) Tj T*
+(meaning from data and is a simple but critical form of data processing.) Tj T*
+() Tj T*
+() Tj T*
+(3 What is a DBMS and What Are Its Advantages?) Tj T*
+(===============================================) Tj T*
+(A Database Management System \(DBMS\) is a collection of programs that manages) Tj T*
+(the database structure and controls access to the data stored in the database.) Tj T*
+(It acts as an intermediary between the user and the database, receiving) Tj T*
+(application requests and translating them into the complex operations needed to) Tj T*
+(fulfil those requests.) Tj T*
+() Tj T*
+(Advantages of a DBMS:) Tj T*
+(- Better data access and security: The DBMS manages database access while) Tj T*
+(  enforcing data privacy and security policies, giving users efficient access) Tj T*
+(  to data.) Tj T*
+(- Improved data integration: It facilitates multiple end-users accessing data) Tj T*
+(  in a well-managed manner, providing a clearer and more integrated view of an) Tj T*
+(  organisation's operations.) Tj T*
+(- Smooth data manipulation: It enables quick answers to on-the-spot requests) Tj T*
+(  for reading or updating data.) Tj T*
+(- High-quality information: It supports quicker and more informed) Tj T*
+(  decision-making, increasing end-user productivit.) Tj T*
+() Tj T*
+() Tj T*
+(4. Operational vs Analytical Databases) Tj T*
+(=======================================) Tj T*
+(Operational Databases \(OLTP  Online Transaction Processing\):) Tj T*
+(These are designed to support the day-to-day operations of an organisation.) Tj T*
+(They store and manage current, detailed data and are optimised for speed and) Tj T*
+(efficiency in handling frequent updates and retrievals.) Tj T*
+ET
+endstream
+endobj
+
+3 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Contents 6 0 R /Resources <</Font <</F1 9 0 R>>>>>>
+endobj
+
+7 0 obj
+<</Length 2828>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 780 Tm
+14 TL
+(Example: An inventory management system that tracks stock levels in real time.) Tj T*
+() Tj T*
+(Analytical Databases \(OLAP  Online Analytical Processing\):) Tj T*
+(These are designed for data analysis and business intelligence. Unlike) Tj T*
+(operational databases, they store historical and aggregated data, optimised for) Tj T*
+(complex queries and reporting to help businesses gain insights into trends and) Tj T*
+(performance.) Tj T*
+(Example: A data warehouse that stores years of sales data to identify seasonal) Tj T*
+(trends and support strategic planning decisions.) Tj T*
+() Tj T*
+(Key Differences:) Tj T*
+(- Operational databases handle current data; analytical databases handle) Tj T*
+(  historical data.) Tj T*
+(- Operational databases are optimised for transactions; analytical databases) Tj T*
+(  are optimised for complex queries and reporting.) Tj T*
+(- Operational databases support daily operations; analytical databases support) Tj T*
+(  decision-making.) Tj T*
+() Tj T*
+() Tj T*
+(5. Types of Data and Use Cases for NoSQL Databases) Tj T*
+(=================================================) Tj T*
+(Databases can be classified by their structure into three types of data:) Tj T*
+() Tj T*
+(- Structured data: Highly organised data arranged in a predefined format) Tj T*
+(  \(rows and columns\), as in relational databases.) Tj T*
+(- Semi-structured data: Has some organisation but lacks the rigidity of) Tj T*
+(  structured data. Common formats include XML and JSON.) Tj T*
+(- Unstructured data: Has no predefined format and includes various types such) Tj T*
+(  as text documents, images, and videos) Tj T*
+() Tj T*
+(NoSQL databases are most effective in use cases that involve:) Tj T*
+(- Large volumes of unstructured or semi-structured data \(e.g., social media) Tj T*
+(  posts, user-generated content\)) Tj T*
+(- Applications that need high scalability and performance under heavy loads) Tj T*
+(  \(e.g., real-time web applications\).) Tj T*
+(- Scenarios where the data model evolves rapidly and a flexible schema is) Tj T*
+(  needed \(e.g., content management systems, e-commerce catalogues\).) Tj T*
+(- Big data and real-time analytics where traditional relational databases) Tj T*
+(  would struggle with volume and velocity.) Tj T*
+() Tj T*
+() Tj T*
+(6. DBMS Without Server Configuration and Its Advantages) Tj T*
+(=====================================================) Tj T*
+(SQLite is the DBMS that does not require server configuration. It is a) Tj T*
+(lightweight, file-based relational database that is self-contained and) Tj T*
+(serverless.) Tj T*
+() Tj T*
+(Advantages of SQLite) Tj T*
+(- No server setup required: It runs entirely within the application, removing) Tj T*
+(  the complexity of configuring and maintaining a separate database server.) Tj T*
+ET
+endstream
+endobj
+
+4 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Contents 7 0 R /Resources <</Font <</F1 9 0 R>>>>>>
+endobj
+
+8 0 obj
+<</Length 2272>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 780 Tm
+14 TL
+(- Simplicity: Easy to set up and use, making it ideal for beginners and) Tj T*
+(  small-scale projects.) Tj T*
+(- Portability: The entire database is stored in a single file, which can be) Tj T*
+(  easily copied, moved, or shared.) Tj T*
+(- Reliability and speed: Despite its compact size, SQLite offers strong) Tj T*
+(  reliability and performance.) Tj T*
+(- Ideal for embedded systems: It is widely used in mobile applications,) Tj T*
+(  embedded systems, and any environment where a lightweight database solution) Tj T*
+(  is needed without the overhead of a full server-based DBMS.) Tj T*
+() Tj T*
+() Tj T*
+(7. ACID Properties in the Context of a DBMS) Tj T*
+(============================================) Tj T*
+(ACID stands for Atomicity, Consistency, Isolation, and Durability. These are) Tj T*
+(the four key properties that relational DBMSs use to ensure data integrity and) Tj T*
+(consistency during database transactions.) Tj T*
+() Tj T*
+(- Atomicity: A transaction is treated as a single, indivisible unit. Either) Tj T*
+(  all operations within the transaction are completed successfully, or none) Tj T*
+(  of them are applied. This prevents partial updates that could corrupt data.) Tj T*
+() Tj T*
+(- Consistency: Every transaction brings the database from one valid state to) Tj T*
+(  another. The database must always remain in a consistent state before and) Tj T*
+(  after a transaction, ensuring data correctness at all times.) Tj T*
+() Tj T*
+(- Isolation: Transactions occurring simultaneously \(in parallel\) are executed) Tj T*
+(  independently of one another. The intermediate state of a transaction is) Tj T*
+(  not visible to other transactions, preventing conflicts and ensuring data) Tj T*
+(  integrity under concurrent access.) Tj T*
+() Tj T*
+(- Durability: Once a transaction has been committed, the changes are permanent) Tj T*
+(  and will persist even in the event of a system crash or failure. The DBMS) Tj T*
+(  uses mechanisms such as logs and backups to ensure durability.) Tj T*
+() Tj T*
+(Together, ACID properties guarantee that database transactions are complete,) Tj T*
+(accurate, independent, and permanent, making relational DBMSs reliable for) Tj T*
+(critical data operations.) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+
+5 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Contents 8 0 R /Resources <</Font <</F1 9 0 R>>>>>>
+endobj
+
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000063 00000 n 
+0000003189 00000 n 
+0000006189 00000 n 
+0000008633 00000 n 
+0000000225 00000 n 
+0000003310 00000 n 
+0000006310 00000 n 
+0000000131 00000 n 
+trailer
+<</Size 10 /Root 1 0 R>>
+startxref
+8754
+%%EOF
