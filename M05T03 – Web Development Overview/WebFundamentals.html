@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WebFundamentals</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 30px; color: #222; line-height: 1.8; font-size: 14px; }
+  h1 { color: #1a3a5c; border-bottom: 2px solid #1a3a5c; padding-bottom: 8px; }
+  h2 { color: #2e6da4; margin-top: 36px; }
+  .question { background: #f5f8fc; border-left: 4px solid #2e6da4; padding: 16px 20px; margin: 18px 0; border-radius: 0 6px 6px 0; }
+  .label { font-weight: bold; color: #1a3a5c; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 13px; }
+  th { background: #1a3a5c; color: #fff; padding: 8px 12px; text-align: left; }
+  td { border: 1px solid #ccc; padding: 8px 12px; vertical-align: top; }
+  tr:nth-child(even) { background: #f0f4fa; }
+  code { background: #1e1e1e; color: #d4d4d4; display: block; padding: 12px 16px; font-family: monospace; font-size: 12.5px; border-radius: 4px; margin: 10px 0; white-space: pre; }
+  ul { margin: 8px 0 8px 20px; }
+  li { margin-bottom: 5px; }
+  .ref-list p { margin: 6px 0; padding-left: 2em; text-indent: -2em; }
+  @media print { body { margin: 20px; } }
+</style>
+</head>
+<body>
+
+<h1>WebFundamentals</h1>
+
+<!-- ===== QUESTION 1 ===== -->
+<div class="question">
+<h2>Question 1: What is Web 3.0, and how is it different from Web 1.0 and Web 2.0?</h2>
+
+<p>The evolution of the Web can be understood across three generations, each fundamentally changing how users interact with the Internet (Berners-Lee and Fischetti, 1999; Spivack, 2007).</p>
+
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Web 1.0</th>
+    <th>Web 2.0</th>
+    <th>Web 3.0</th>
+  </tr>
+  <tr>
+    <td><strong>Era</strong></td>
+    <td>Early 1990s – early 2000s</td>
+    <td>Mid-2000s – present</td>
+    <td>Emerging (2020s onwards)</td>
+  </tr>
+  <tr>
+    <td><strong>Nature</strong></td>
+    <td>Read-only, static</td>
+    <td>Read-write, interactive</td>
+    <td>Read-write-own, decentralised</td>
+  </tr>
+  <tr>
+    <td><strong>User role</strong></td>
+    <td>Passive consumer</td>
+    <td>Active contributor</td>
+    <td>Owner and participant</td>
+  </tr>
+  <tr>
+    <td><strong>Data control</strong></td>
+    <td>Website owner</td>
+    <td>Central platforms (Google, Meta)</td>
+    <td>Individual users (via blockchain)</td>
+  </tr>
+  <tr>
+    <td><strong>Technology</strong></td>
+    <td>Static HTML pages</td>
+    <td>AJAX, APIs, social platforms</td>
+    <td>Blockchain, AI, semantic web</td>
+  </tr>
+  <tr>
+    <td><strong>Examples</strong></td>
+    <td>Early corporate websites</td>
+    <td>Facebook, YouTube, Wikipedia</td>
+    <td>Cryptocurrency wallets, dApps, NFTs</td>
+  </tr>
+</table>
+
+<p><span class="label">Web 1.0</span> consisted of static, read-only pages where content was created exclusively by website owners. Users could only browse; they could not interact, comment, or contribute in any way (Berners-Lee and Fischetti, 1999).</p>
+
+<p><span class="label">Web 2.0</span> introduced dynamic, user-generated content and interactivity. Social media platforms, blogs, and wikis allowed users to create and share content. However, data remained centralised in the hands of large technology companies (O'Reilly, 2005).</p>
+
+<p><span class="label">Web 3.0</span> is the next evolution of the Web, characterised by decentralisation, artificial intelligence, and user ownership of data. Key features include:</p>
+<ul>
+  <li><strong>Decentralisation:</strong> Data is stored across a distributed network using blockchain technology rather than on centralised servers owned by corporations.</li>
+  <li><strong>Semantic web:</strong> Machines can understand the meaning and context of web content, enabling more intelligent search and data processing.</li>
+  <li><strong>User ownership:</strong> Users own and control their own data, digital assets, and identity — no single company holds authority over it.</li>
+  <li><strong>AI integration:</strong> Artificial intelligence personalises and automates experiences across the web in far more sophisticated ways than Web 2.0 algorithms (Spivack, 2007).</li>
+</ul>
+
+<p>In summary, while Web 1.0 was a passive information network and Web 2.0 was an interactive social network, Web 3.0 is a decentralised, intelligent, and user-owned network where data and digital assets belong to the individual, not a central authority.</p>
+</div>
+
+<!-- ===== QUESTION 2 ===== -->
+<div class="question">
+<h2>Question 2: What are the functional differences between the front end and the back end of a web application?</h2>
+
+<p>A web application is divided into two main parts — the front end and the back end — which work together to deliver a complete user experience (Duckett, 2011).</p>
+
+<table>
+  <tr>
+    <th>Aspect</th>
+    <th>Front End</th>
+    <th>Back End</th>
+  </tr>
+  <tr>
+    <td><strong>Also known as</strong></td>
+    <td>Client-side</td>
+    <td>Server-side</td>
+  </tr>
+  <tr>
+    <td><strong>Runs on</strong></td>
+    <td>The user's browser (client device)</td>
+    <td>The web server</td>
+  </tr>
+  <tr>
+    <td><strong>Visible to user?</strong></td>
+    <td>Yes — everything the user sees</td>
+    <td>No — hidden from the user</td>
+  </tr>
+  <tr>
+    <td><strong>Core technologies</strong></td>
+    <td>HTML, CSS, JavaScript</td>
+    <td>Python, Node.js, PHP, Java, Ruby</td>
+  </tr>
+  <tr>
+    <td><strong>Responsibilities</strong></td>
+    <td>Layout, styling, interactivity, navigation, forms</td>
+    <td>Business logic, database queries, authentication, APIs</td>
+  </tr>
+  <tr>
+    <td><strong>Examples</strong></td>
+    <td>Login form, navigation menu, product image gallery</td>
+    <td>Validating credentials, fetching user data, processing payments</td>
+  </tr>
+</table>
+
+<p><span class="label">The front end</span> is everything the user sees and interacts with directly in the browser. It is built using three core technologies:</p>
+<ul>
+  <li><strong>HTML</strong> defines the structure and content of the page.</li>
+  <li><strong>CSS</strong> controls the visual appearance — colours, fonts, layout, and responsiveness.</li>
+  <li><strong>JavaScript</strong> adds interactivity — animations, form validation, dynamic content updates without page reloads.</li>
+</ul>
+
+<p><span class="label">The back end</span> runs on the server and handles everything the user cannot see. It is responsible for:</p>
+<ul>
+  <li>Processing HTTP requests sent by the front end.</li>
+  <li>Executing business logic (e.g., calculating the total price of a shopping cart).</li>
+  <li>Communicating with databases to store and retrieve data.</li>
+  <li>Authenticating users and enforcing security rules.</li>
+  <li>Sending HTTP responses with the requested data back to the client (Duckett, 2011).</li>
+</ul>
+
+<p>The front end and back end communicate via the HTTP request-response cycle. For example, when a user submits a login form, the front end sends an HTTP POST request containing the username and password to the back end. The back end validates these credentials against the database and sends back a response — either a success (200 OK) with the user's data, or an error (401 Unauthorised) if the credentials are incorrect.</p>
+</div>
+
+<!-- ===== QUESTION 3 ===== -->
+<div class="question">
+<h2>Question 3: Explain the process from typing a URL to viewing the requested page, including the HTTP request-response cycle</h2>
+
+<p>When a user types a URL into a browser address bar, a series of steps take place behind the scenes before the requested page is displayed on screen (Kurose and Ross, 2017).</p>
+
+<p><span class="label">Step-by-step process:</span></p>
+
+<ul>
+  <li><strong>1. URL parsing:</strong> The browser reads the URL and identifies its components — the protocol (HTTPS), the domain name (e.g., www.google.com), the path (/search), and any query parameters (?q=web).</li>
+  <li><strong>2. DNS lookup:</strong> The browser contacts a Domain Name System (DNS) server to translate the human-readable domain name into a numeric IP address (e.g., 142.250.80.46). This is similar to looking up a phone number in a directory.</li>
+  <li><strong>3. TCP connection:</strong> The browser establishes a TCP (Transmission Control Protocol) connection with the server at that IP address on port 443 (for HTTPS) or port 80 (for HTTP).</li>
+  <li><strong>4. TLS handshake (HTTPS only):</strong> If the site uses HTTPS, an encrypted TLS session is established between the client and server to secure all data in transit.</li>
+  <li><strong>5. HTTP request sent:</strong> The browser sends an HTTP GET request to the server, asking for the resource at the specified path.</li>
+  <li><strong>6. Server processes the request:</strong> The server receives the request, executes any back-end logic needed (e.g., fetching data from a database), and prepares a response.</li>
+  <li><strong>7. HTTP response received:</strong> The server sends back an HTTP response containing a status code, response headers, and the requested content in the body (e.g., an HTML file).</li>
+  <li><strong>8. Browser renders the page:</strong> The browser parses the HTML and makes additional requests for linked resources (CSS stylesheets, JavaScript files, images). Once all resources are loaded, the page is rendered and displayed to the user (Kurose and Ross, 2017).</li>
+</ul>
+
+<p><span class="label">Example HTTP Request Message:</span></p>
+<code>GET /index.html HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+Accept: text/html,application/xhtml+xml
+Accept-Language: en-ZA,en;q=0.9
+Connection: keep-alive</code>
+
+<p>In this request: <code style="display:inline; background:#eee; color:#222; padding:1px 4px; border-radius:3px;">GET</code> is the HTTP method, <code style="display:inline; background:#eee; color:#222; padding:1px 4px; border-radius:3px;">/index.html</code> is the path to the requested resource, and <code style="display:inline; background:#eee; color:#222; padding:1px 4px; border-radius:3px;">HTTP/1.1</code> is the protocol version. The header lines provide additional context about the client and the request.</p>
+
+<p><span class="label">Example HTTP Response Message:</span></p>
+<code>HTTP/1.1 200 OK
+Date: Wed, 07 May 2026 08:00:00 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Content-Type: text/html; charset=UTF-8
+Content-Length: 6821
+Last-Modified: Mon, 05 May 2026 10:15:00 GMT
+Connection: close
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;title&gt;Example Page&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to Example.com&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+
+<p>In this response: <code style="display:inline; background:#eee; color:#222; padding:1px 4px; border-radius:3px;">HTTP/1.1 200 OK</code> is the status line confirming the request succeeded. The header lines describe the server, content type, and content length. The body contains the actual HTML content that the browser will render for the user.</p>
+
+<p>This entire cycle — from the user pressing Enter to the page appearing on screen — typically completes in milliseconds, demonstrating the efficiency of the HTTP protocol and the client-server architecture that underpins the World Wide Web.</p>
+</div>
+
+<!-- ===== REFERENCE LIST ===== -->
+<h2>Reference List</h2>
+<div class="ref-list">
+  <p>Berners-Lee, T. and Fischetti, M. (1999). <em>Weaving the web: The original design and ultimate destiny of the World Wide Web by its inventor</em>. HarperCollins.</p>
+  <p>Duckett, J. (2011). <em>HTML and CSS: Design and build websites</em>. John Wiley &amp; Sons.</p>
+  <p>Kurose, J.F. and Ross, K.W. (2017). <em>Computer networking: A top-down approach</em> (7th ed.). Pearson Education.</p>
+  <p>O'Reilly, T. (2005). <em>What is Web 2.0: Design patterns and business models for the next generation of software</em>. O'Reilly Media. Available at: https://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html [Accessed 7 May 2026].</p>
+  <p>Spivack, N. (2007). <em>Web 3.0: The third generation web is coming</em>. Lifeboat Foundation. Available at: https://lifeboat.com/ex/web.3.0 [Accessed 7 May 2026].</p>
+</div>
+
+</body>
+</html>

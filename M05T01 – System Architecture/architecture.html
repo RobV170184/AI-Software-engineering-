@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>System Architecture – Practical Task</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 30px; color: #222; line-height: 1.7; font-size: 14px; }
+  h1 { color: #1a3a5c; border-bottom: 2px solid #1a3a5c; padding-bottom: 8px; }
+  h2 { color: #2e6da4; margin-top: 36px; }
+  h3 { color: #444; margin-top: 24px; }
+  .section { margin-bottom: 40px; }
+  .pattern-block { background: #f5f8fc; border-left: 4px solid #2e6da4; padding: 16px 20px; margin: 18px 0; border-radius: 0 6px 6px 0; }
+  .combined-block { background: #f5fcf5; border-left: 4px solid #2e8a4a; padding: 16px 20px; margin: 18px 0; border-radius: 0 6px 6px 0; }
+  .label { font-weight: bold; color: #1a3a5c; }
+  ul { margin: 8px 0 8px 20px; }
+  li { margin-bottom: 5px; }
+  .ref-list p { margin: 6px 0; padding-left: 2em; text-indent: -2em; }
+  @media print { body { margin: 20px; } }
+</style>
+</head>
+<body>
+
+<h1>System Architecture – Practical Task</h1>
+
+<!-- ===== PART 1: Architecture Patterns ===== -->
+<div class="section">
+<h2>Part 1: Real-World Examples of Architecture Patterns</h2>
+
+<!-- LAYERED -->
+<div class="pattern-block">
+  <h3>1. Layered Architecture</h3>
+
+  <p><span class="label">Real-world example:</span> Online Banking System (e.g., Standard Bank's internet banking portal) (Standard Bank Group, n.d.)</p>
+
+  <p>An online banking platform is a classic layered system built around four tiers (Richards, 2015):</p>
+  <ul>
+    <li><strong>Presentation layer:</strong> The web browser or mobile app that customers interact with – account dashboards, fund-transfer forms, and statement views.</li>
+    <li><strong>Business layer:</strong> The application server handling authentication, transfer validation, fraud-detection rules, and interest calculations.</li>
+    <li><strong>Persistence layer:</strong> Data-access objects and ORM (Object Relational Mapping) components that translate business objects into database queries.</li>
+    <li><strong>Database layer:</strong> A relational database (e.g., Oracle DB) storing customer accounts, transactions, and audit logs.</li>
+  </ul>
+
+  <p><span class="label">When it is most appropriate:</span><br>
+  Layered architecture is best when a system has distinct, separable concerns – a visible front-end, significant business logic, and persistent data storage. It suits enterprise applications where teams are organised around specialisations (UI designers, backend developers, database administrators) and where regulatory compliance requires clear audit boundaries between tiers (Richards, 2015).</p>
+
+  <p><span class="label">Why it is appropriate for this example:</span><br>
+  Banking software demands strict separation of concerns for both security and maintainability. Keeping authentication and business rules in the business layer means a UI redesign never accidentally exposes database logic. The persistence layer abstracts database changes so the rest of the system is unaffected when the database is upgraded. Each layer can also be tested and certified independently, which is critical for financial-sector compliance requirements (Standard Bank Group, n.d.).</p>
+</div>
+
+<!-- REPOSITORY -->
+<div class="pattern-block">
+  <h3>2. Repository Architecture</h3>
+
+  <p><span class="label">Real-world example:</span> Integrated Development Environment (IDE) – JetBrains IntelliJ IDEA (JetBrains, n.d.)</p>
+
+  <p>An IDE such as IntelliJ stores all project artefacts (source files, build configurations, dependencies, run configurations) in a central workspace repository (JetBrains, n.d.). Independent tools – the code editor, debugger, compiler, static analyser, version-control plugin, and test runner – all read from and write to this shared repository rather than communicating directly with each other.</p>
+
+  <p><span class="label">When it is most appropriate:</span><br>
+  Repository architecture is best when multiple independent components need to share large amounts of long-lived data, and when those components should remain loosely coupled to each other. It suits scenarios where data is the primary asset (e.g., development tools, data-warehouse systems, content management platforms) and where a single source of truth must be maintained (Richards, 2015).</p>
+
+  <p><span class="label">Why it is appropriate for this example:</span><br>
+  An IDE integrates many tools that all operate on the same codebase. If each tool communicated point-to-point with every other tool the coupling would be unmanageable. The repository pattern keeps all tools decoupled: the debugger does not need to know about the static analyser – both simply read the source files from the shared project store. Adding a new plugin (e.g., a Docker integration) only requires it to interact with the existing repository, not with every existing tool (JetBrains, n.d.).</p>
+</div>
+
+<!-- CLIENT-SERVER -->
+<div class="pattern-block">
+  <h3>3. Client-Server Architecture</h3>
+
+  <p><span class="label">Real-world example:</span> Gmail (Google's email service) (Google, n.d.)</p>
+
+  <p>Gmail is a textbook client-server system (Google, n.d.). The clients (web browser, Android/iOS app, desktop email clients via IMAP) connect over the internet to Google's distributed mail servers. The servers host the services – email storage, search indexing, spam filtering, and calendar integration – which all clients access uniformly regardless of the device they are using.</p>
+
+  <p><span class="label">When it is most appropriate:</span><br>
+  Client-server architecture is best when many users need concurrent access to shared services or data, when centralised management of data is required, or when clients are geographically dispersed. It suits any system where the server-side resources (compute, storage) are too large to reside on each client device (Richards, 2015).</p>
+
+  <p><span class="label">Why it is appropriate for this example:</span><br>
+  Email is inherently a shared, network-dependent service. Users expect to access the same inbox from a phone, laptop, and tablet simultaneously. Centralising mail on servers allows Google to apply consistent spam filters, enforce storage quotas, and ensure that a message sent from one device immediately appears on all others. A peer-to-peer approach would make this consistency extremely difficult and would not scale to billions of users (Google, n.d.).</p>
+</div>
+
+<!-- PIPE AND FILTER -->
+<div class="pattern-block">
+  <h3>4. Pipe and Filter Architecture</h3>
+
+  <p><span class="label">Real-world example:</span> Data ETL Pipeline – Apache Kafka and Apache Spark, used by companies such as LinkedIn and Uber (Apache Software Foundation, n.d.a; Apache Software Foundation, n.d.b)</p>
+
+  <p>In a big-data ETL (Extract, Transform, Load) pipeline, raw event data flows through a series of independent processing stages (filters) connected by data channels (pipes) (Apache Software Foundation, n.d.a):</p>
+  <ul>
+    <li><strong>Ingest filter:</strong> Apache Kafka ingests raw event streams (e.g., user ride requests, GPS coordinates).</li>
+    <li><strong>Cleanse filter:</strong> A Spark job removes duplicate records and normalises field formats.</li>
+    <li><strong>Enrich filter:</strong> Another Spark stage joins the stream with reference data (e.g., mapping coordinates to city zones).</li>
+    <li><strong>Aggregate filter:</strong> Results are aggregated into summary metrics (average ride time per zone per hour).</li>
+    <li><strong>Load filter:</strong> Final data is written to a data warehouse (e.g., Amazon Redshift) for analytics dashboards.</li>
+  </ul>
+
+  <p><span class="label">When it is most appropriate:</span><br>
+  Pipe and filter is best when data must pass through a well-defined sequence of independent transformations, when processing steps are reusable across different pipelines, and when the volume of data makes parallel or streaming execution desirable. It is particularly suitable for batch processing, log analysis, video transcoding, and any data-driven business workflow (Apache Software Foundation, n.d.b).</p>
+
+  <p><span class="label">Why it is appropriate for this example:</span><br>
+  ETL pipelines are inherently sequential transformation problems. Each stage has a single responsibility, making the system easy to test, extend, or replace one filter without affecting others. A new data quality check can be inserted as an additional filter without redesigning the entire pipeline. The pattern also maps naturally onto distributed frameworks like Spark, which run filters in parallel across a cluster to handle massive data volumes efficiently (Apache Software Foundation, n.d.a; Apache Software Foundation, n.d.b).</p>
+</div>
+</div>
+
+<!-- ===== PART 2: Combined Patterns ===== -->
+<div class="section">
+<h2>Part 2: Systems Combining Two or More Patterns</h2>
+
+<!-- EXAMPLE 1 -->
+<div class="combined-block">
+  <h3>Example 1: Netflix – Microservices Architecture combined with Pipe and Filter</h3>
+
+  <p><span class="label">Description:</span><br>
+  Netflix uses a microservices architecture where independent services handle specific functions: user authentication, content recommendations, billing, streaming delivery, and search (Fowler and Lewis, 2014; Netflix, n.d.). Alongside this, Netflix operates a pipe and filter pipeline for video encoding. When a new title is uploaded, the raw video file flows through a series of filters – format validation, transcoding into multiple resolutions (4K, 1080p, 720p, 480p), audio normalisation, subtitle embedding, and packaging into streaming formats (HLS, MPEG-DASH) – before being distributed to edge servers globally (Netflix, n.d.).</p>
+
+  <p><span class="label">Strengths of the combined system:</span></p>
+  <ul>
+    <li><strong>Independent scalability:</strong> Each microservice scales based on its own demand (e.g., the recommendation service can scale independently of the billing service during peak viewing hours). The encoding pipeline stages can also be parallelised to process many videos simultaneously.</li>
+    <li><strong>Fault isolation:</strong> A failure in the subtitle encoding filter does not bring down the recommendation microservice. Services and pipeline stages fail in isolation.</li>
+    <li><strong>Specialised optimisation:</strong> Each microservice and each filter can be written in the language and framework best suited to its task.</li>
+    <li><strong>Continuous delivery:</strong> Microservices can be updated and deployed independently, enabling Netflix to push hundreds of deployments per day without system-wide downtime (Fowler and Lewis, 2014).</li>
+  </ul>
+
+  <p><span class="label">Limitations of the combined system:</span></p>
+  <ul>
+    <li><strong>Operational complexity:</strong> Managing hundreds of microservices and encoding pipeline instances requires sophisticated orchestration tools (Netflix uses Kubernetes and custom tooling), adding infrastructure overhead (Netflix, n.d.).</li>
+    <li><strong>Latency accumulation:</strong> Both patterns introduce inter-component communication costs – network calls between microservices and data hand-offs between pipeline filters. These latencies can compound under high load.</li>
+    <li><strong>Difficult debugging:</strong> Tracing a fault across multiple microservices and pipeline stages requires distributed tracing tools (e.g., Zipkin). Without them, diagnosing failures is very difficult.</li>
+    <li><strong>Data consistency challenges:</strong> With many independent microservices each owning their own data store, maintaining consistency across services requires careful design (e.g., eventual consistency, sagas) (Fowler and Lewis, 2014).</li>
+  </ul>
+</div>
+
+<!-- EXAMPLE 2 -->
+<div class="combined-block">
+  <h3>Example 2: SAP ERP System – Layered Architecture combined with Repository Architecture</h3>
+
+  <p><span class="label">Description:</span><br>
+  SAP's Enterprise Resource Planning (ERP) system combines a layered architecture with a repository pattern (SAP SE, n.d.). The system is structured in layers: a presentation layer (SAP Fiori web UI / GUI), a business logic layer (ABAP application server processing HR, finance, procurement, and supply-chain rules), a persistence layer (SAP's database abstraction), and a database layer (SAP HANA in-memory database). Cutting across all these layers is a central data repository – a unified enterprise database that stores all business data shared across modules. Every module (HR, Finance, Inventory, Procurement) reads from and writes to this central repository, ensuring a single source of truth for the entire organisation (SAP SE, n.d.).</p>
+
+  <p><span class="label">Strengths of the combined system:</span></p>
+  <ul>
+    <li><strong>Single source of truth:</strong> All departments access the same data. When the finance module records a purchase, the inventory module immediately reflects the updated stock – eliminating data silos and reconciliation errors (SAP SE, n.d.).</li>
+    <li><strong>Clear separation of concerns:</strong> The layered structure keeps UI, business rules, and data access logically separate. A change to a UI screen does not affect financial calculation logic.</li>
+    <li><strong>Consistency and integrity:</strong> Centralising data in the repository makes it straightforward to enforce referential integrity and transactional consistency across the entire enterprise.</li>
+    <li><strong>Reusability:</strong> The layered design allows individual business-logic components to be reused across different modules (e.g., a currency-conversion function used by both Finance and Procurement) (Richards, 2015).</li>
+  </ul>
+
+  <p><span class="label">Limitations of the combined system:</span></p>
+  <ul>
+    <li><strong>Single point of failure:</strong> The central repository is the backbone of the entire system. A database outage affects every module simultaneously – HR, Finance, Logistics – potentially halting business operations (SAP SE, n.d.).</li>
+    <li><strong>Performance bottlenecks:</strong> All modules compete for access to the central database. During month-end financial closing, for example, heavy concurrent access can degrade performance across all departments.</li>
+    <li><strong>Scalability constraints:</strong> The tightly coupled layered structure makes it difficult to scale individual modules independently. Scaling the inventory module typically means scaling the entire application stack.</li>
+    <li><strong>High implementation complexity and cost:</strong> Configuring a combined layered/repository ERP system to match an organisation's specific processes requires significant expertise, time, and licensing cost – as evidenced by the notoriously long and expensive SAP implementation projects many enterprises undertake (SAP SE, n.d.).</li>
+  </ul>
+</div>
+</div>
+
+<!-- ===== REFERENCE LIST ===== -->
+<div class="section">
+<h2>Reference List</h2>
+<div class="ref-list">
+  <p>Apache Software Foundation (n.d.a). <em>Apache Kafka documentation</em>. Apache Software Foundation. Available at: https://kafka.apache.org/documentation/ [Accessed 21 April 2026].</p>
+  <p>Apache Software Foundation (n.d.b). <em>Apache Spark documentation</em>. Apache Software Foundation. Available at: https://spark.apache.org/docs/latest/ [Accessed 21 April 2026].</p>
+  <p>Fowler, M. and Lewis, J. (2014). <em>Microservices</em>. Available at: https://martinfowler.com/articles/microservices.html [Accessed 21 April 2026].</p>
+  <p>Google (n.d.). <em>Gmail</em>. Google LLC. Available at: https://www.google.com/gmail/ [Accessed 21 April 2026].</p>
+  <p>JetBrains (n.d.). <em>IntelliJ IDEA – the IDE for professional development in Java and Kotlin</em>. JetBrains s.r.o. Available at: https://www.jetbrains.com/idea/ [Accessed 21 April 2026].</p>
+  <p>Netflix (n.d.). <em>Netflix Tech Blog</em>. Netflix, Inc. Available at: https://netflixtechblog.com/ [Accessed 21 April 2026].</p>
+  <p>Richards, M. (2015). <em>Software architecture patterns</em> (1st ed., pp. 1–8). O'Reilly Media, Inc.</p>
+  <p>SAP SE (n.d.). <em>What is ERP?</em> SAP SE. Available at: https://www.sap.com/products/erp/what-is-erp.html [Accessed 21 April 2026].</p>
+  <p>Standard Bank Group (n.d.). <em>Digital banking</em>. Standard Bank Group. Available at: https://www.standardbank.com [Accessed 21 April 2026].</p>
+</div>
+</div>
+
+</body>
+</html>

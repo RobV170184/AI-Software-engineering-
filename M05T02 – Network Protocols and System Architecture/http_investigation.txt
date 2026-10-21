@@ -1,0 +1,225 @@
+HTTP INVESTIGATION - Network Protocols and System Architecture
+
+
+SECTION 1: BASIC REQUEST ANALYSIS
+
+
+Command executed:
+    curl -v https://httpbin.org/get
+
+REQUEST HEADERS (what the client sends) 
+
+    GET /get HTTP/2
+    Host: httpbin.org
+    User-Agent: curl/8.5.0
+    Accept: */*
+
+RESPONSE HEADERS (what the server sends back)
+
+    HTTP/2 200
+    date: Wed, 06 May 2026 21:18:29 GMT
+    content-type: application/json
+    content-length: 254
+    server: gunicorn/19.9.0
+    access-control-allow-origin: *
+    access-control-allow-credentials: true
+
+HTTP STATUS CODE 
+
+    200 OK — The request was received, understood, and processed
+    successfully by the server.
+
+ RESPONSE BODY 
+
+    {
+    "rgs": {},
+      "headers": {
+        "Accept": "*/*",
+        "Host": "httpbin.org",
+        "User-Agent": "curl/8.5.0",
+        "X-Amzn-Trace-Id": "Root=1-69fbb025-6640578c0c7a3c50428b15c1"
+      },
+      "origin": "41.56.108.140",
+      "url": "https://httpbin.org/get"
+    }
+
+ CONNECTION WORKFLOW 
+
+    1. DNS resolution: httpbin.org resolved to IP addresses
+       (e.g., 54.225.113.51).
+    2. TCP connection: curl connected to httpbin.org on port 443.
+    3. TLS handshake: A TLSv1.2 encrypted session was established
+       using ECDHE-RSA-AES128-GCM-SHA256.
+    4. HTTP/2 stream opened: The GET request was sent over the
+       secure connection.
+    5. Server response: The server replied with status 200 and
+       returned a JSON body reflecting the request headers.
+    6. Connection kept intact for potential reuse.
+
+ KEY TAKEAWAYS 
+
+    - The client initiates the request with standard headers
+      (Host, User-Agent, Accept).
+    - HTTPS encrypts all data in transit using TLS — the
+      connection is secured before any HTTP data is exchanged.
+    - The server echoes back the received headers in the JSON
+      body, confirming what was sent.
+    - HTTP/2 is used here, which allows multiplexing multiple
+      requests over a single connection.
+
+
+SECTION 2: METHOD INTERACTION (POST vs GET)
+-
+
+Command executed:
+    curl -X POST https://httpbin.org/post \
+         -d "key=value" \
+         -H "Content-Type: application/x-www-form-urlencoded"
+
+ RESPONSE BODY 
+
+    {
+      "args": {},
+      "data": "",
+      "files": {},
+      "form": {
+        "key": "value"
+      },
+      "headers": {
+        "Accept": "*/*",
+        "Content-Length": "9",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Host": "httpbin.org",
+        "User-Agent": "curl/8.5.0",
+        "X-Amzn-Trace-Id": "Root=1-69fbb030-78d1e05b15fe0eff7a02ae32"
+      },
+      "json": null,
+      "origin": "41.56.108.140",
+      "url": "https://httpbin.org/post"
+    }
+
+HOW POST DIFFERS FROM GET 
+
+    - GET requests data from the server; no body is sent.
+      POST submits data TO the server inside the request body.
+    - In the GET response, the "args" field was empty — no data
+      was sent. In the POST response, the "form" field contains
+      {"key": "value"}, confirming data was transmitted.
+    - POST includes additional headers: Content-Type and
+      Content-Length, which describe the body being sent.
+    - GET parameters appear in the URL; POST parameters are
+      hidden in the request body, making POST more suitable for
+      sensitive data like passwords or form submissions.
+
+ PURPOSE OF THE PAYLOAD (key=value) 
+
+    The payload "key=value" is the data submitted to the server
+    in the request body. It is encoded as
+    application/x-www-form-urlencoded, which is the standard
+    format for HTML form submissions. The server receives and
+    parses this data — as seen in the "form": {"key": "value"}
+    field in the response body, confirming the server correctly
+    interpreted the submitted data.
+
+ KEY TAKEAWAYS 
+
+    - POST sends data in the request body, not the URL.
+    - The Content-Type header tells the server how to parse
+      the body (in this case as form data).
+    - The server reflects submitted data back in the response,
+      showing that POST requests are used to send and process
+      information on the server side.
+
+SECTION 3: STATUS CODE EXPLORATION
+
+
+Commands executed:
+    curl -I https://httpbin.org/status/404
+    curl -I https://httpbin.org/status/403
+ 404 NOT FOUND 
+
+    Response headers:
+        HTTP/2 404
+        date: Wed, 06 May 2026 21:18:51 GMT
+        content-type: text/html; charset=utf-8
+        content-length: 0
+        server: gunicorn/19.9.0
+
+    Meaning:
+        404 Not Found means the server could not locate the
+        requested resource. The resource either never existed,
+        has been deleted, or the URL is incorrect.
+
+    Why this might occur:
+        - The user typed a wrong URL.
+        - A page or resource has been moved or deleted without
+          a redirect being set up.
+        - A broken link points to a resource that no longer
+          exists.
+
+403 FORBIDDEN 
+
+    Response headers:
+        HTTP/2 403
+        date: Wed, 06 May 2026 21:18:52 GMT
+        content-type: text/html; charset=utf-8
+        content-length: 0
+        server: gunicorn/19.9.0
+
+    Meaning:
+        403 Forbidden means the server understood the request
+        but refuses to authorise it. The resource exists, but
+        the client does not have permission to access it.
+
+    What this tells us about access restrictions:
+        - The server actively blocks access to the resource.
+        - This is commonly used to protect admin pages, private
+          files, or restricted API endpoints.
+        - Unlike 404 (resource not found), 403 confirms the
+          resource EXISTS — but access is denied.
+        - This is how servers enforce authentication and
+          authorisation boundaries.
+
+ HOW ERRORS ARE COMMUNICATED IN HEADERS 
+
+    The error status code is communicated in the first line of
+    the HTTP response header (e.g., "HTTP/2 404"). The rest of
+    the headers provide context such as the date, content type,
+    and server software. The body (content-length: 0 here) may
+    contain an error message page in a real application.
+
+ KEY TAKEAWAYS 
+
+    - 4xx codes indicate client-side errors (the problem is
+      with the request or the requester's permissions).
+    - 404 = resource does not exist or cannot be found.
+    - 403 = resource exists but access is denied by the server.
+    - Developers use these codes to debug API calls and build
+      appropriate error handling in web applications.
+
+
+SUMMARY
+
+
+    Through these exercises, the following was demonstrated:
+
+    1. HTTP uses a request/response cycle where the client sends
+       headers describing its request and the server replies
+       with status codes and response headers.
+
+    2. HTTPS secures this exchange with TLS encryption before
+       any data is transmitted.
+
+    3. GET is used to retrieve data; POST is used to submit
+       data to the server in a request body.
+
+    4. HTTP status codes communicate the outcome of every
+       request — 200 for success, 404 for not found, and
+       403 for forbidden access.
+
+    5. Response headers always include the status code, date,
+       content type, and server information, giving both the
+       client and developer detailed insight into what happened
+       during the request/response exchange.
+
+
